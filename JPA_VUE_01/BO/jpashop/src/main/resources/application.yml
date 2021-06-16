@@ -5,13 +5,13 @@ spring:
     password: 321200
     driver-class-name: org.mariadb.jdbc.Driver
 
-jpa:
-  hibernate:
-    ddl-auto: create
-  properties:
+  jpa:
     hibernate:
-      # show_sql: TRUE
-      format_sql: TRUE
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: TRUE
+        format_sql: TRUE
 
 logging:
   level:
