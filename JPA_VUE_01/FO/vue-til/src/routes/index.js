@@ -5,7 +5,20 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
-  routes: [],
+  routes: [
+    {
+      path: '/',
+      redirect: '/login',
+    },
+    {
+      path: '/login',
+      component: () => import('@/views/LoginPage.vue'),
+    },
+    {
+      path: '/main',
+      component: () => import('@/views/MainPage.vue'),
+    },
+  ],
 });
 
 export default router;

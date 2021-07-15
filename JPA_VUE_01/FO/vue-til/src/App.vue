@@ -15,9 +15,6 @@ export default {
   components: {
     AppHeader,
   },
-  created() {
-    var a = 10;
-  },
 };
 </script>
 
