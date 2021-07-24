@@ -40,6 +40,7 @@ public class Order {
     private List<OrderItem> orderItems = new ArrayList<>();
 
     // 하나의 주문 -> 하나의 배송정보
+    // 연관관계 주인 : Order table
     @OneToOne
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
@@ -49,15 +50,15 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status; // 주문상태 - ORDER, CANCEL
 
-    // 생성 메서드
-
-    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
-        Order order = new Order();
-        order.setMember(member);
-        order.setDelivery(delivery);
-        for (OrderItem orderItem : orderItems) {
-            order.addOrderItem();
-        }
-    }
+//    // 생성 메서드
+//
+//    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
+//        Order order = new Order();
+//        order.setMember(member);
+//        order.setDelivery(delivery);
+//        for (OrderItem orderItem : orderItems) {
+//            order.addOrderItem();
+//        }
+//    }
 
 }
