@@ -2,6 +2,8 @@ package jbabook.jpashop;
 
 import javax.transaction.Transactional;
 
+import jbabook.jpashop.domain.Member;
+import jbabook.jpashop.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
