@@ -18,10 +18,10 @@ public class MemberController {
     @NonNull
     private final MemberService memberService;
 
-    @PostMapping("/insert")
-    public MemberDto.insert insert(@RequestBody final MemberDto.insertParam insertParam){
-        return memberService.insert(insertParam);
-    }
+//    @PostMapping("/insert")
+//    public MemberDto.insert insert(@RequestBody final MemberDto.insertParam insertParam){
+//        return memberService.insert(insertParam);
+//    }
 
 
 }
