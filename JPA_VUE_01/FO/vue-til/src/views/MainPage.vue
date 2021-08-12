@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div>
-      <h1>Here is Main</h1>
-    </div>
+    <h1>Main Page</h1>
+    <MainForm></MainForm>
   </div>
 </template>
 
 <script>
-export default {};
+import MainForm from '@/components/MainForm.vue';
+export default {
+  components: {
+    MainForm,
+  },
+};
 </script>
 
 <style></style>
