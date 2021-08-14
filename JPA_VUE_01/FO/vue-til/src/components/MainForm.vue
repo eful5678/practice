@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <p>상품 기능</p>
+    <div class="jumbotron">
+      <p class="lead">상품 기능</p>
       <p>
         <a href="">상품 등록</a>
         <a href="">상품 목록</a>

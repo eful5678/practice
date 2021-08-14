@@ -10,7 +10,10 @@
         <label for="password">Password : </label>
         <input type="password" />
       </div>
-      <button type="submit" @click="insert">Login</button>
+      <div>
+        <button type="submit" @click="login">Login</button>
+        <button @click="insertBind">Join</button>
+      </div>
     </div>
   </div>
 </template>
@@ -24,7 +27,10 @@ export default {
     },
   }),
   methods: {
-    insert: function () {
+    insertBind: function () {
+      this.$router.push('/signup');
+    },
+    login: function () {
       console.log(this.member.class.username);
     },
   },
