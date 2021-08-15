@@ -20,7 +20,12 @@ const router = new VueRouter({
     },
     {
       path: '/signup',
+      name: 'SignUpForm',
       component: () => import('@/views/SignUpPage.vue'),
+    },
+    {
+      path: '/members',
+      component: () => import('@/components/member/MemberList.vue'),
     },
   ],
 });

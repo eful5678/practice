@@ -4,7 +4,7 @@
       <label for="name">이름</label>
       <input
         type="text"
-        v-model="member.username"
+        v-model="member.class.username"
         placeholder="이름을 입력해주세요."
       />
     </div>
@@ -12,7 +12,7 @@
       <label for="city">도시</label>
       <input
         type="text"
-        v-model="member.city"
+        v-model="member.class.city"
         placeholder="도시를 입력해주세요"
       />
     </div>
@@ -20,7 +20,7 @@
       <label for="street">거리</label>
       <input
         type="text"
-        v-model="member.street"
+        v-model="member.class.street"
         placeholder="거리를 입력해주세요"
       />
     </div>
@@ -28,7 +28,7 @@
       <label for="zipcode">우편번호</label>
       <input
         type="text"
-        v-model="member.zipcode"
+        v-model="member.class.zipcode"
         placeholder="우편번호를 입력해주세요"
       />
     </div>
@@ -40,8 +40,9 @@
 
 <script>
 import { Login } from '@/resources/entity/member';
+import { registerUser } from '@/api/auth';
 export default {
-  name: 'SignUpForm.vue',
+  name: 'SignUpForm',
   components: {},
   data: () => ({
     member: {
@@ -49,7 +50,12 @@ export default {
     },
   }),
   methods: {
-    insert: function () {},
+    insert: function () {
+      console.log('insert');
+      console.log(this.member.class.insert());
+      registerUser(this.member.class.insert());
+      this.$router.push('/login');
+    },
   },
 };
 </script>

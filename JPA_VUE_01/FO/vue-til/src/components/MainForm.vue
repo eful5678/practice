@@ -1,6 +1,10 @@
 <template>
   <div>
     <div class="jumbotron">
+      <p>회원 기능</p>
+      <p>
+        <button @click="listBind">회원목록</button>
+      </p>
       <p class="lead">상품 기능</p>
       <p>
         <a href="">상품 등록</a>
@@ -16,7 +20,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'MemberList',
+  components: {},
+  methods: {
+    listBind: function () {
+      this.$router.push('/members');
+    },
+  },
+};
 </script>
 
 <style></style>

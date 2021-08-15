@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <div>
+      <div class="mb-3 row">
         <label for="username">ID : </label>
         <input type="text" v-model="member.class.username" />
         {{ member.class.username }}
@@ -29,6 +29,9 @@ export default {
   methods: {
     insertBind: function () {
       this.$router.push('/signup');
+      // this.common.routerNext({
+      //   name: 'SignUpForm',
+      // });
     },
     login: function () {
       console.log(this.member.class.username);
