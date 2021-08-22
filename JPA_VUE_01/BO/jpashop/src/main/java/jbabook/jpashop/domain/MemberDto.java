@@ -10,9 +10,11 @@ public class MemberDto {
     @Getter
     @Setter
     public static class insert{
-        public insert(Member m){
+        private String name;
 
-        }
+        private Address address;
+
+        private List<Order> orders;
     }
 
     @Getter

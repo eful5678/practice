@@ -23,6 +23,7 @@
         </tbody>
       </table>
       <div>{{ member }}</div>
+      <div>{{ _data }}</div>
     </div>
   </div>
 </template>
@@ -30,6 +31,7 @@
 <script>
 import { Login } from '@/resources/entity/member';
 import { searchUser } from '@/api/auth';
+import { Response } from '@/resources/entity/global';
 export default {
   data: () => ({
     member: {
@@ -38,13 +40,19 @@ export default {
   }),
   mounted() {
     this.search();
+    console.log(this);
   },
   methods: {
     search: function () {
       console.log('search');
       searchUser().then(result => {
         console.log(result);
+        this.responseParse(this.member, result, this.member.class);
       });
+    },
+    responseParse(dataArea, _data, _class) {
+      // return new Response(_data).data.parse(_class);
+      Object.assign(dataArea, new Response(_data).parse(_class));
     },
   },
 };
