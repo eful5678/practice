@@ -27,6 +27,11 @@ const router = new VueRouter({
       path: '/members',
       component: () => import('@/components/member/MemberList.vue'),
     },
+    {
+      path: '/BookForm',
+      name: 'BookForm',
+      component: () => import('@/components/product/BookForm.vue'),
+    },
   ],
 });
 

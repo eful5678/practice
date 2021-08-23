@@ -7,7 +7,7 @@
       </p>
       <p class="lead">상품 기능</p>
       <p>
-        <a href="">상품 등록</a>
+        <button @click="productInsertBind">상품등록</button>
         <a href="">상품 목록</a>
       </p>
       <p>주문 기능</p>
@@ -26,6 +26,9 @@ export default {
   methods: {
     listBind: function () {
       this.$router.push('/members');
+    },
+    productInsertBind: function () {
+      this.$router.push('BookForm');
     },
   },
 };
