@@ -8,7 +8,7 @@ function registerUser(userData) {
 }
 
 function searchUser() {
-  return instance.get('/members/list');
+  return instance.get('/api/v2/members');
 }
 
 export { registerUser, searchUser };

@@ -23,7 +23,8 @@
         </tbody>
       </table>
       <div>{{ member }}</div>
-      <div>{{ _data }}</div>
+      <div>{{ member.data }}</div>
+      <div>{{ member.class }}</div>
     </div>
   </div>
 </template>
