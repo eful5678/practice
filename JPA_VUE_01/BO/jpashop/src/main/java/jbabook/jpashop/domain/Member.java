@@ -33,4 +33,6 @@ public class Member {
     // 하나의 회원이 여러 주문을 한다
     @OneToMany(mappedBy = "member") // 연관관계의 주인이 아닐 때 mapped by / 누구에 의해? Order table의 member field -> 읽기 전용
     private List<Order> orders = new ArrayList<>();
+
+
 }
