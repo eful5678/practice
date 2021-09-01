@@ -59,14 +59,14 @@ public class InitDb {
             Book book2 = createBook("SPRING2", 52000, 8);
             em.persist(book2);
 
-            OrderItem orderItem1 = OrderItem.createOrderItem(book1, 40000, 4);
-            OrderItem orderItem2 = OrderItem.createOrderItem(book2, 52000, 2);
-
-            Delivery delivery = createDelivery(member);
-
-            Order order = Order.createOrder(member, delivery, orderItem1, orderItem2);
-
-            em.persist(order);
+//            OrderItem orderItem1 = OrderItem.createOrderItem(book1, 40000, 4);
+//            OrderItem orderItem2 = OrderItem.createOrderItem(book2, 52000, 2);
+//
+//            Delivery delivery = createDelivery(member);
+//
+//            Order order = Order.createOrder(member, delivery, orderItem1, orderItem2);
+//
+//            em.persist(order);
         }
 
         private Member createMember(String name, String city, String street, String zipcode){
