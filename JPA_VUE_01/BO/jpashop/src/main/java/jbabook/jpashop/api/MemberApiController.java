@@ -1,5 +1,6 @@
 package jbabook.jpashop.api;
 
+import jbabook.jpashop.domain.Address;
 import jbabook.jpashop.domain.Member;
 import jbabook.jpashop.service.MemberService;
 import lombok.AllArgsConstructor;
@@ -45,13 +46,14 @@ public class MemberApiController {
     public List<Member> membersV1(){
         return memberService.findMembers();
     }
+
     @CrossOrigin(origins = "http://localhost:8084")
     @GetMapping("/api/v2/members")
     public Result membersV2(){
         List<Member> findMembers = memberService.findMembers();
 
         List<MemberDto> collect = findMembers.stream()
-                .map(m -> new MemberDto(m.getName()))
+                .map(m -> new MemberDto(m.getName(), m.getId(), m.getAddress()))
                 .collect(Collectors.toList());
 
         return new Result(collect);
@@ -68,6 +70,8 @@ public class MemberApiController {
     @AllArgsConstructor
     static class MemberDto extends Member{
         private String name;
+        private Long id;
+        private Address address;
 
     }
 

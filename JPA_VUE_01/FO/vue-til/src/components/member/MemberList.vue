@@ -14,18 +14,17 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{ member.class.id }}</td>
-            <td>{{ member.class.name }}</td>
-            <td>{{ member.class.city }}</td>
-            <td>{{ member.class.street }}</td>
-            <td>{{ member.class.zipcode }}</td>
+            <td>{{ this.member.data[0].id }}</td>
+            <td>{{ this.member.data[0].name }}</td>
+            <!-- <td>{{ this.member.data[0].address.city }}</td>
+            <td>{{ this.member.data[0].address.street }}</td>
+            <td>{{ this.member.data[0].address.zipcode }}</td> -->
           </tr>
         </tbody>
       </table>
-      <div>{{ member }}</div>
-      <div>{{ member.data }}</div>
-      <div>{{ member.class }}</div>
     </div>
+    <!-- <div>{{ this.member.data[0].id }}</div>
+    <div>{{ this.member }}</div> -->
   </div>
 </template>
 
@@ -48,7 +47,9 @@ export default {
       console.log('search');
       searchUser().then(result => {
         console.log(result);
+        console.log(result.data.data);
         this.responseParse(this.member, result, this.member.class);
+        console.log(this.member);
       });
     },
     responseParse(dataArea, _data, _class) {

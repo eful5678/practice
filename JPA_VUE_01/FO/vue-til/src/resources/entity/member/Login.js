@@ -7,7 +7,11 @@ export default class Login extends BaseEntity {
     // id
     this.id = _data.id || '';
     this.name = _data.name || '';
-    this.address = _data.address || {};
+    this.address = _data.address || {
+      city: _data.city || '',
+      street: _data.street || '',
+      zipcode: _data.zipcode || '',
+    };
 
     // 회원가입을 위한 변수
     this.username = _data.username || '';
