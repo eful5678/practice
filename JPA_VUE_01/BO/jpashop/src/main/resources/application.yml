@@ -14,6 +14,7 @@ spring:
       hibernate:
         # show_sql: TRUE
         format_sql: TRUE
+        default_batch_fetch_size: 1000
 
 logging:
   level:

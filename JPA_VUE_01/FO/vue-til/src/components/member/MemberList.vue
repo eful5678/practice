@@ -13,18 +13,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{{ this.member.data[0].id }}</td>
-            <td>{{ this.member.data[0].name }}</td>
-            <!-- <td>{{ this.member.data[0].address.city }}</td>
+          <tr v-for="member in this.member.data" :key="member.id">
+            <td>{{ member.id }}</td>
+            <td>{{ member.name }}</td>
+            <td>{{ member.address.city }}</td>
+            <td>{{ member.address.street }}</td>
+            <td>{{ member.address.zipcode }}</td>
+            <!-- <td>{{ this.member.data[0].name }}</td>
+            <td>{{ this.member.data[0].address.city }}</td>
             <td>{{ this.member.data[0].address.street }}</td>
             <td>{{ this.member.data[0].address.zipcode }}</td> -->
           </tr>
         </tbody>
       </table>
     </div>
-    <!-- <div>{{ this.member.data[0].id }}</div>
-    <div>{{ this.member }}</div> -->
+    <!-- <div>{{ this.member.data }}</div> -->
   </div>
 </template>
 
